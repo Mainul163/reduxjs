@@ -17,3 +17,10 @@ setProducts hoilo action er nam
       .then((req) => req.json())
       .then((data) => dispatch(setProducts(data)));
   }, []);
+
+
+
+3.const reducers = combineReducers({ allproduct: productReducer });
+
+
+reducer er nam productReducer
