@@ -24,3 +24,32 @@ setProducts hoilo action er nam
 
 
 reducer er nam productReducer
+
+
+
+
+
+
+<......................siam.....................>
+
+
+
+
+
+
+import { createStore, combineReducers, applyMiddleware, compose } from "redux";
+
+
+
+import thunk from "redux-thunk";
+
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const rootReducer = combineReducers({
+  productReducer: productReducer,
+});
+
+const store = createStore(
+  rootReducer,
+  composeEnhancers(applyMiddleware(thunk))
+);
